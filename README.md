@@ -81,6 +81,7 @@ This example shows how to link two devices using pynip2p. It uses [pyniscope](ht
 	
 	# loads file into the FPGA
 	fpga.Open(fname, sig, res, 0)
+	
 	# loads digitizer drivers
 	from pyniscope import pyniscope, P2PAttribute
 	scope = pyniscope()
@@ -123,6 +124,8 @@ This example shows how to link two devices using pynip2p. It uses [pyniscope](ht
 	# starts digitizing
 	scope.InitiateAcquisition()
 	scope.SendSWTrigger()
+	
+	# waits for acquisition to complete
 	while scope.AcquisitionStatus()==0:
 		pass
 	
