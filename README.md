@@ -15,8 +15,7 @@ Here is a brief list of the functions and other things provided by pynip2p. An e
 The *enum* structures give a convenient way to access stream attributes and events codes.
 The functions that are not supposed to return any value will return True if they succeeded, and False otherwise.
 
-**pynip2p**
-* (int writerEndpointHandle, int readerEndpointHandle)
+**pynip2p**(int writerEndpointHandle, int readerEndpointHandle)
 
 *Stream creation/deletion functions*
 * bool CreateAndLinkStream(int writerEndpointHandle, int readerEndpointHandle, bool enableStream)
