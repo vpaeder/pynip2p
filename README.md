@@ -122,11 +122,6 @@ This example shows how to link two devices using pynip2p. It uses [pyniscope](ht
 	
 	# starts digitizing
 	scope.InitiateAcquisition()
-	scope.SendSWTrigger()
-	
-	# waits for acquisition to complete
-	while scope.AcquisitionStatus()==0:
-		pass
 	
 	# reads data from the FPGA DMA-to-host channels
 	data0 = array(fpga.ReadFifoI16(1, numPoints, timeout))*coeffs[0][1] + coeffs[0][0] # scales with scaling coefficients corresponding to the channel
