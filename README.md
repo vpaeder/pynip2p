@@ -17,7 +17,7 @@ While, in principle, it should be possible to compile this wrapper on any system
 * Install Labview (not sure it is necessary, but I needed it anyway)
 * Install [Python](http://www.python.org).
 * Install [boost](http://www.boost.org). I took the [Windows binaries](http://sourceforge.net/projects/boost/).
-* Install [Microsoft Visual Studio Express 2013](http://visualstudio.com). It is free to use but a registration is required.
+* Install [Microsoft Visual Studio Express](http://visualstudio.com). It is free to use but a registration is required.
 
 Once you have done that, open the Visual Studio project file. You may need to adjust the include and lib paths before building.
 In my case, the required include paths were:
