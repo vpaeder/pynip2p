@@ -8,6 +8,32 @@ I used Microsoft Visual Studio Express 2013 to compile (project files included).
 
 The wrapper is made to wrap as closely as possible the functions provided by the NI-P2P C interface. The project is made of a C-to-C++ stage followed by a C++-to-Python stage (I find it more readable in this way).
 
+How to install
+==============
+
+While, in principle, it should be possible to compile this wrapper on any system with available NI libraries, I only tested it with Windows 7 and Microsoft Visual Studio Express 2013. Here is what I did:
+
+* Install the necessary National Instruments drivers (in my case NI-FPGA and NI-SCOPE) including the C APIs
+* Install Labview (not sure it is necessary, but I needed it anyway)
+* Install [Python](http://www.python.org).
+* Install [boost](http://www.boost.org). I took the [Windows binaries](http://sourceforge.net/projects/boost/).
+* Install [Microsoft Visual Studio Express 2013](http://visualstudio.com). It is free to use but a registration is required.
+
+Once you have done that, open the Visual Studio project file. You may need to adjust the include and lib paths before building.
+In my case, the required include paths were:
+* For Python: C:\Python27\include
+* For boost: C:\local\boost_1_56_0
+* For National Instruments drivers: C:\Program Files (x86)\National Instruments\Shared\ExternalCompilerSupport\C\include
+And the required library paths were:
+* For Python: C:\Python27\libs
+* For boost: C:\local\boost_1_56_0\lib32-msvc-12.0
+* For National Instruments drivers: C:\Program Files (x86)\National Instruments\Shared\ExternalCompilerSupport\C\lib32\msvc
+Change this according to your installation paths.
+
+Use the *Build* command of Visual Studio. You should get a *.pyd* file in the *Release* folder. Copy it somewhere where your Python script can find it.
+
+Should you try with a different system and/or compiler, I am interested in your experience.
+
 Architecture
 ============
 
