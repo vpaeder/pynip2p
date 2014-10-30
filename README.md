@@ -24,10 +24,12 @@ In my case, the required include paths were:
 * For Python: `C:\Python27\include`
 * For boost: `C:\local\boost_1_56_0`
 * For National Instruments drivers: `C:\Program Files (x86)\National Instruments\Shared\ExternalCompilerSupport\C\include`
+
 And the required library paths were:
 * For Python: `C:\Python27\libs`
 * For boost: `C:\local\boost_1_56_0\lib32-msvc-12.0`
 * For National Instruments drivers: `C:\Program Files (x86)\National Instruments\Shared\ExternalCompilerSupport\C\lib32\msvc`
+
 Change this according to your installation paths.
 
 Use the *Build* command of Visual Studio. You should get a *.pyd* file in the *Release* folder. Copy it somewhere where your Python script can find it.
