@@ -30,7 +30,7 @@ And the required library paths were:
 * For boost: `C:\local\boost_1_56_0\lib32-msvc-12.0`
 * For National Instruments drivers: `C:\Program Files (x86)\National Instruments\Shared\ExternalCompilerSupport\C\lib32\msvc`
 
-To prevent compilation errors, you will likely have to change one header file manually. Locate the file *nip2p.h* and comment out the includes for *postfix.h* and *prefix.h*. These two files are not distributed anymore and will result in a compilation failure.
+To prevent compilation errors, you will likely have to change one header file manually. Locate the file *nip2p.h* (likely in `C:\Program Files (x86)\National Instruments\Shared\ExternalCompilerSupport\C\include`) and comment out the includes for *postfix.h* and *prefix.h*. These two files are not distributed anymore and will result in a compilation failure.
 
 All paths must of course be adapted to your installation paths.
 
